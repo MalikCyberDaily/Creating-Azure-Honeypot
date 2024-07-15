@@ -1,7 +1,7 @@
 # Creating-Azure-Honeypot
 <h2>Configuring Honeypot VMs in Azure</h2>
 
-![ConfigureHoneynet](https://i.imgur.com/OeCPjoX.png)
+![ConfigureHoneynet](https://i.imgur.com/ojBNIRc.jpeg)
 
 <b>To create the open vulnerable environment, the first step is to deploy 2 virtual machines and configure the NSGs to allow inbound connections from any source to any port:</b>
 - Log into your Azure account and select Virtual Machines.
@@ -10,13 +10,13 @@
 - Create each VM with a strong username and password
 - After creating the Windows VM, RDP into the machine and turn off all windows firewall settings via **wf.msc**
 
-![DisableFW](https://i.imgur.com/g5PAPsr.png)
+![DisableFW](https://i.imgur.com/DFyk4qJ.png)
   
 - Go back to Azure and go to Network Security Groups
 - For each VMs NSG, Add a new rule to allow all inbound connections to all ports. Set the priority to the lowest one to ensure this rule will be followed first.
 - A simple, but effective Azure honeypot has been configured!
 
-![NSGAllowALL](https://i.imgur.com/Q850lM4.png)
+![NSGAllowALL](https://i.imgur.com/sIxB9JA.png)
 
 A quick tip, run ping -t [vm's ip address] on your host machine to verify if connection is being allowed
-![ping](https://i.imgur.com/MMibipV.png)
+![ping](https://i.imgur.com/R9IJu5Q.png)
